@@ -1,0 +1,23 @@
+<%= form_for @output, remote: true do |f| %>
+
+  <div class="group">       
+
+    <label><b>Item</b></label>
+    <%= f.hidden_field :item_id, id: "item_id_field" %>
+    <%= f.hidden_field :date, value: DateTime.now %>
+    <%= f.autocomplete_field :title, autocomplete_item_name_outputs_path, id: "output_title newItem", id_element: "#item_id_field", update_attributes: {}, title: "Clique aqui para editar o campo" %>
+
+    <span class="highlight"></span> 
+    <br>
+    <label><b>Quantidade:</b></label>
+    <%= f.number_field :value, value: "1", id: "itemAm", in: 1..1000 %>
+    
+    
+    <a href="#" title="Cancelar registro"><span id="closeIcon"></span></a>
+    <%= link_to "", id: "link_submit" do %>
+      <span id="addItem" >&nbsp;</span>
+    <% end %>
+    
+  </div> 
+
+<% end %>

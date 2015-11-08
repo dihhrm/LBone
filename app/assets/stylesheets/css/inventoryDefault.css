@@ -1,0 +1,128 @@
+@charset "utf-8";
+
+
+#statistics em{
+	font-size: 2em;
+	font-style: normal;
+}
+
+.column-3{
+	width: 30%;
+	margin: 0 1.5%;
+	float: left;
+	text-align: center;
+	padding: 1em 0;
+
+}
+#filterOptions:after{
+
+ 		content: url("../svg/funnel.svg");
+ 		width: 1.4em;
+ 		height: 1.4em;
+ 		display: inline-block;
+ 		
+
+ 	}
+ #filterOptions a{
+ 	z-index: 1000;
+ }
+
+ 	.itens h1{
+ 		width: 50%;
+ 	}	
+
+.caption{
+	
+	margin: 0;
+	padding: 0;
+	right: 35%;
+	 margin-right: 2%;
+	 margin-bottom: 2em;
+	 font-size:14px;
+	 z-index: 10000;
+	 position: absolute;
+}
+.caption li{
+	display: inline-block;
+	margin: 0 0.9em 0 0;
+	font-size:14px;
+
+
+}
+
+/*Apenas igualando as bordas*/
+ 	#informations thead tr:after{
+		content: "";
+
+ 		width: 0.8em;
+ 		height: 0.8em;
+ 		background-color: transparent;
+ 	}
+ 	/*
+ 	.input:after{
+ 		content: "";
+
+ 		width: 0.8em;
+ 		height: 0.8em;
+ 		background-color: #86bd99;
+ 		border-radius: 50%;
+ 		left: 0;
+ 		display: inline-block;
+ 		margin-top: 0.5em;
+ 	}
+ 	.output:after{
+ 		content: "";
+ 		width: 0.8em;
+ 		height: 0.8em;
+ 		background-color: #d9696a;
+ 		border-radius: 50%;
+ 		left: 0;
+ 		display: inline-block;
+ 		margin-top: 0.5em;
+ 	}*/
+
+
+
+table{
+	width: 96%;
+	margin: auto;
+	text-align: left;
+	
+	
+}
+table tr{
+	border-bottom: 1px solid #f4f7f5;
+
+}
+
+thead tr{
+	height: 50px;
+}
+
+thead tr th{
+	font-weight: bold;
+
+}
+
+tbody tr{
+	height: 35px;
+}
+
+tbody tr:hover{
+	cursor: pointer;
+}
+tbody tr td:not(:nth-child(3)){
+	padding-left: 1em;
+}
+
+table a{
+	text-decoration: none;
+	color: inherit;
+}
+
+tbody tr:hover{
+	background-color: rgba(0,0,0,.1);
+	cursor: pointer;
+}
+
+

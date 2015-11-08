@@ -1,0 +1,60 @@
+<%= content_for :css do %>
+  <link rel="stylesheet" type="text/css" href="/assets/css/inventoryDefault.css">
+<% end%>
+
+<p id="notice"><%= notice %></p>
+
+<div id="main">
+      
+  <section id="itens">
+    
+    <header>
+      <p class="caption">Mostrando os 8 itens mais usados. Opções de filtro:<a href="#"><span id="filterOptions"><span></a></p>
+      
+      <h1>Estoque</h1>
+    </header>
+
+    <table>
+      
+      <thead>
+        <tr><th>Item</th><th>Em estoque</th><th>Classificação</th></tr>
+      </thead>
+
+      <tbody>
+
+        <% @items.each do |item| %>
+
+          <tr><td><%= link_to item.name, edit_item_path(item) %></td><td><%= item.amount %></td><td><%= item.classification %></td></tr>
+          
+        <% end %>
+        
+      </tbody>
+
+    </table>
+  </section>
+
+  <section id="statistics" style="color: #FFF;">
+    <h1>Estatísticas</h1>
+
+    <div class="column-3" style="background: rgb(154, 89, 181);color:#FFF;">
+      <em data-value="<%= calculaTotal(@items) %>"></em>
+      <p>Itens em estoque</p>
+    </div>
+    <div class="column-3" style="background: rgb(232, 76, 61)">
+      <em data-value="<%= calculaInpOut(@outputs) %>"></em>
+      <p>Utilizados este mês
+    </div>
+    <div class="column-3" style="background: rgb(26, 188, 156)">
+      <em data-value="<%= calculaInpOut(@inputs) %>"></em>
+      <p>Recebidos este mês</p>
+    </div>
+
+  </section> 
+  
+  <%= render 'shared/movimentacoes' %>
+  
+</div>
+
+
+
+  

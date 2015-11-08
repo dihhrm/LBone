@@ -1,0 +1,75 @@
+<%= form_for @booking do |f| %>
+
+   <fieldset>
+      
+      <%= f.hidden_field :schedule, id: "bookingDate" %>
+
+      <div class="group">
+         
+         <%= f.text_field :professor, id: "professor" %>         
+         <span class="highlight"></span>
+         <span class="bar"></span>
+         <label for="professor">Professor (a)</label>
+      </div>
+      <div class="group">
+
+	     <%= f.text_field :discipline, id: "discipline" %>         
+         <span class="highlight"></span>
+         <span class="bar"></span>
+         <label for="discipline">Disciplina</label>
+      </div>
+      <div class="group">
+
+         <%= f.text_field :classe, id: "class" %>
+         <span class="highlight"></span>
+         <span class="bar"></span>
+         <label for="class">Turma</label>
+      </div>
+      <div class="group small">
+
+      	 <%= f.number_field :students, id: "number-students" %>         
+         <span class="highlight"></span>
+         <span class="bar"></span>
+         <label for="number-students">Alunos</label>
+      </div>
+      <div class="group small">
+
+  		 <%= f.text_field :booking_time, id: "number-students", as: :time %>         
+         <span class="highlight"></span>
+         <span class="bar"></span>
+         <label for="time">Horário</label>
+      </div>
+      <h3>&rarr;&nbsp;Itens para aula</h3>
+      <table>
+         <tbody id="items">
+            <!--<tr><td><input type="hidden" value="12-234" name=""></td>
+               <td>Lorem ipsum</td><td>234</td><td class="exclude">
+               <a href="#">X</a></td>
+               </tr>
+               
+               <tr><td><input type="hidden" value="11-4" name=""></td>
+               <td>Lorem ipsum</td><td>4</td>
+               <td class="exclude"><a href="#">X</a></td>
+               </tr>
+               
+               <tr> <td><input type="hidden" value="121-24" name=""></td>
+               <td>Lorem ipsum</td>
+               <td>24</td><td class="exclude"><a href="#">X</a></td>
+               </tr>-->
+         </tbody>
+      </table>
+      <!-- <input type="text" id="itemsAutocomplete" name=""  > -->
+      <%= f.autocomplete_field :item_name, autocomplete_item_name_bookings_path, id: "booking_item_name itemsAutocomplete", id_element: "#item_id_field", update_attributes: {} %>
+
+      <%= f.hidden_field :id_item, id: "item_id_field" %>
+	  
+      <input id="itemAm" type="number" value="1" min="1" max="x" >
+      <a href="#" title="Adicionar" id="addItem" ><span id="add" >&nbsp;</span></a>
+      
+      <%= f.button "Agendar", class: "button confirm", type: "submit", id: "confirm" %>
+
+      <%= link_to raw("<button type='button' class='button cancel'>Cancelar</button>"), bookings_path, wrapper: false %>
+      
+   </fieldset>
+
+<% end %>

@@ -1,0 +1,43 @@
+<%= form_for @booking, html: { :class => "form-horizontal" } do |f| %>
+  	
+	
+	<div class="form-group">
+		<label for="">Professor</label><br>
+		<%= f.text_field :professor, label: "Professor", input_html: { class: "form-control", type: "text", id: "name" } %>
+	</div>
+
+	<div class="form-group">
+		<label for="">Disciplina</label><br>
+		<%= f.text_field :discipline, label: "Disciplina", input_html: { class: "form-control", type: "text", id: "name" } %>
+	</div>
+	<div class="form-group">
+		<label for="">Turma</label><br>
+		<%= f.text_field :classe, label: "Turma", input_html: { class: "form-control", type: "text", id: "name" } %>
+	</div>
+	<div class="form-group">
+		<label for="">Estudantes</label><br>
+		<%= f.number_field :students, label: "Nº de Alunos", input_html: { class: "form-control", type: "number", id: "name" } %>
+	</div>
+	<div class="form-group">
+		<label for="">Horario</label><br>
+		<%= f.text_field :schedule, label: "Horario", as: :time, input_html: { data: { :format => "hh:mm:ss" } } %>
+	</div>
+	
+	<div class="form-group">
+		<label for="">Item</label><br>
+		<%= f.autocomplete_field :item_name, autocomplete_item_name_bookings_path, id_element: "#item_id_field", update_attributes: {} %>
+	</div>
+	<div class="form-group">
+		<%= f.hidden_field :id_item, id: "item_id_field" %>
+	</div>
+    
+    <br>     
+
+    <!-- Botão Cancelar !!!(OBS.: Criou tag link em volta do botão, monitorar eventuais bugs)!!! -->
+    <%= link_to raw("<button type='button' class='btn btn-danger'>Cancelar</button>"), items_path, wrapper: false %>
+           
+    <%= f.button :submit, class: "btn btn-default" %>  
+    
+
+<% end %>
+

@@ -1,0 +1,169 @@
+section h1{
+	margin: 0 0 2em 0 !important;
+	width: 70%;
+
+}
+
+*{
+	text-decoration: none;
+}
+
+#addIcon{
+	content: url("../svg/addBlack.svg");
+	position: relative;
+	width: 2em;
+	height: 2em;
+	float: right;
+	margin-right: 5em;
+	margin-top: -5em;
+	z-index: 1000;
+}
+
+/*icone*/
+#filterIcon{
+	position: relative;
+	display: inline-block;
+	margin-left: 4em;
+}
+
+a #filterIcon{
+	color: #666;
+	font-size: 14px;
+	margin-bottom: 1em;
+	
+}
+#filterIcon:after{
+
+ 		content: url("../svg/funnel.svg");
+ 		width: 1.4em;
+ 		height: 1.4em;
+ 		display: inline-block;
+ 		
+
+ 	}
+
+#newOutput .group{
+	margin-bottom: 0.4em !important;
+}
+
+
+
+
+#newOutput #addItem{
+	content: url("../svg/addBlack.svg");
+	width: 1.8em;
+	height: 1.8em;
+	float: right;
+	margin: 0em 1em 0 0.5em;
+	border: none;
+	display: inline-block;
+	background-color: transparent;
+	
+
+}
+
+#newOutput #closeIcon{
+	content: url("../svg/closeBlack.svg");
+	width: 1.8em;
+	height: 1.8em;
+	float: right;
+	margin: 0em 20% 0 0.5em;
+	
+
+}
+
+#newItem{
+	width: 80%;
+	display: inline-block;
+}
+
+#itemAm{
+	width: 5em !important;
+	text-align: center;
+}
+.outputWidget{
+	width: 80%;
+	margin: 0.1em auto;
+	float: left;
+	margin-left: 2em;
+	padding: 1em;
+}
+
+.outputWidget p:not(:first-child){
+	border-bottom: 1px solid rgba(0,0,0,.2);
+	padding-bottom: 1em;
+}
+
+
+.outputWidget p{
+	display: inline-block;
+	width: 70%;
+}
+
+.hrLine{
+	width: 100% !important;
+	clear: both;
+	text-align: center;
+	font-size: 14px;
+	margin: 0.9em 0;
+
+}
+.outputWidgetIcon{
+	width: 4em;
+	height: 4em;
+	border: 1px solid #666;
+	border-radius: 50%;
+	text-align: center;
+	display: inline-block;
+	float: left;
+	margin: 0 2em 0 0;
+	line-height: 4em;
+
+	
+}
+
+#newOutput{
+	width: 100%;
+	text-align: left;
+	padding-left: 3em;
+	overflow: hidden;
+	margin: 1em 0 3em 0;
+	display: none;
+	left: -100%;
+
+}
+#newOutput input{
+	width: 80%;
+	display: inline-block;
+	margin: 1em auto;	
+	border: none;
+	border-bottom: 1px solid rgba(0,0,0,.4);
+	padding-bottom: 0.2em;
+}
+
+
+
+#filter{
+	text-align: left;
+	padding-left: 2em;
+	display: none;
+}
+
+#filter b{
+	margin-right: 1em;
+}
+
+#filter input{
+	margin-right: 1.5em;
+	margin-left: 1.5em;
+	max-width: 6em;
+	text-align: center;
+}
+
+#filter button{
+	padding: 0.2em 1em;
+	box-shadow: none;
+	border: none;
+	color: #FFF;
+	background-color: #86bd99;
+}

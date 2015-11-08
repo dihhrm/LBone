@@ -1,0 +1,36 @@
+<%= content_for :css do %>
+
+  <link rel='stylesheet' type='text/css' href='/assets/css/new.css'>  
+<% end%>
+<section>
+
+    <header>
+      <h1>Novo item de estoque</h1>
+    </header>
+
+    <!-- form cadastro de novo item para o estoque-->
+      
+      <%= simple_form_for @item do |f| %>
+        
+          <%= f.input :name, label: "Nome do Item", wrapper: false, required: true, class: "", input_html: { type: "text", id: "name" } %>
+          
+          <%= f.input :amount, label: "Quantidade", wrapper: false, required: true, input_html: { step: "1", min: "1", value: "1", type: "number", id: "amount" } %>
+
+          <%= f.input :ref_code, label: "Código de Referência", wrapper: false, required: true, input_html: { type: "text", id: "referenceCode"} %> 
+          
+          <%= f.input :localization, label: "Localização", wrapper: false, required: true, input_html: { type: "text", id: "localization"} %>
+          
+          <%= f.input :classification, label: "Classificação", wrapper: false, collection: [ "Não permanente", "Permanente", "Outros" ], include_blank: false %>
+
+          <%= f.input :description, wrapper: false, required: true, label: "Descrição (máximo de 255 caracteres)", input_html: { maxlength: "255", id: "description", } %>
+
+          <%= f.input :additional_info, wrapper: false, label: "Informações adicionais (opcional)", input_html: { maxlength: "255", id: "aditionalInformations", type: "text" } %><br>
+          
+          <!-- Botão Cancelar !!!(OBS.: Criou tag link em volta do botão, monitorar eventuais bugs)!!! -->
+          <%= link_to raw("<button type='button' class='cancel button'>Cancelar</button>"), items_path, wrapper: false %>
+          
+          <%= f.button :button, "Cadastrar", class: "confirm button", type: "submit" %>            
+
+      <% end %>
+
+</section>

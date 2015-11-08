@@ -1,0 +1,80 @@
+<!--menu -->
+<div id="menu">
+
+	<div id="menuHeader">
+		<div id="logo">	
+
+		</div>
+		<form method="post">
+			<div class="group">      
+		    <input type="search" required placeholder="Pesquise algo no sistema" id="userQuery">
+		    <span class="highlight"></span>
+		    <span class="bar"></span>				    			      
+	    </div>
+	</form>
+	</div>
+
+	<nav>
+		<ul>
+			<li  class="firstLevelOption">
+
+				<a href="#estoque"> <span class="navIcon" id="inventoryIcon">Estoque</span></a>
+				<ul>
+					<li><a href="<%= items_path %>">Itens</a></li>
+					<li><a href="<%= new_item_path %>">Registrar item</a></li>					
+				</ul>
+
+			</li>
+			<li class="firstLevelOption">
+				<a href="#" ><span class="navIcon" id="outputIcon">Saídas</span></a>
+				<ul>
+					<li><a href="<%= outputs_path %>">Registros</a></li>
+										
+				</ul>
+
+			</li>
+
+			<li class="firstLevelOption">
+				<a href="#entradas"> <span class="navIcon" id="inputIcon">Entradas</span></a>
+
+				<ul>
+					<li><a href="<%= inputs_path %>">Registros</a></li>					
+				</ul>
+
+			</li>
+
+			<li class="firstLevelOption"><a href="<%= bookings_path %>"> <span class="navIcon" id="agendaIcon">Agenda</span></a></li>
+
+			<li class="firstLevelOption"><a href="#usuarios"> <span class="navIcon" id="usersIcon">Usuários</span></a></li>
+
+			<li class="firstLevelOption"><a href="#relatorios"> <span class="navIcon" id="reportIcon">Relatórios</span></a></li>
+
+			<li class="firstLevelOption"><a href="#ajuda"> <span class="navIcon" id="helpIcon">Ajuda</span></a></li>
+			
+			<li class="firstLevelOption"><a href="#sobre"> <span class="navIcon" id="aboutIcon">Sobre o sistema</span></a></li>
+
+		</ul>
+	</nav>
+	
+		<div id="userLoged">
+			<ul id="accountMenu">
+
+				<li><%= link_to "Editar Perfil", usuarios_path %></li>
+				<li><%= link_to "Sair", destroy_user_session_path %></li>
+				<li><a href="#" id="closeAccountMenu">&nbsp;&larr;</a></li>
+
+			</ul>
+
+
+				<a href="#" title="" id="showAccountMenu">
+					<div id="profile-picture">
+						<img src="/assets/Diego.png" alt="">
+					</div>
+					<a href="#" id="userName"><%= current_user.name %></a>
+				</a>
+		</div>
+
+	</div> 				
+
+</div>
+
