@@ -21,9 +21,9 @@ test:
 production:
   dapter: postgresql
   encoding: unicode
-  database: basepg
+  database: d7g5f21qo0pnuq
   pool: 5
-  username: diego
-  password: labonepu@2015   ### password you have specified within psql
-  host: localhost
+  username: vtvtcsjabenaow
+  password: 2arpuiPnve5UPIQtza8Kr2lfez   ### password you have specified within psql
+  host: ec2-50-19-233-111.compute-1.amazonaws.com
   port: 5432
