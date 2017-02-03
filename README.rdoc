@@ -6,8 +6,8 @@ O Software foi construído à partir de uma necessidade da cordenação do curso
 
 O Software tem como principais funcionalidades:
 
-O Cadastro de Alunos com acesso ao laboratório de materiais
-O agendamento de horários de uso do laboratório
-Cadastro de entrada e saída de materiais do laborátorio
-Cadastro de materiais
-Dentre outros..
+* O Cadastro de Alunos com acesso ao laboratório de materiais
+* O agendamento de horários de uso do laboratório
+* Cadastro de entrada e saída de materiais do laborátorio
+* Cadastro de materiais
+* Dentre outros..
