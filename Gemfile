@@ -11,7 +11,7 @@ group :development do
 end
 
 group :production do
-	gem 'pg'
+	gem 'mysql2'
 end
 
 # Gems used only for assets and not required
@@ -48,6 +48,16 @@ gem 'simple_form'
 
 # Autocomplete
 gem 'rails3-jquery-autocomplete'
+
+group :development do
+    gem 'capistrano',         require: false
+    gem 'capistrano-rvm',     require: false
+    gem 'capistrano-rails',   require: false
+    gem 'capistrano-bundler', require: false
+    gem 'capistrano3-puma',   require: false
+end
+
+gem 'puma'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

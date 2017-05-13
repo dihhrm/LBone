@@ -21,11 +21,10 @@ test:
   database: labone_db
 
 production:
-  dapter: postgresql
+  dapter: mysql2
   encoding: unicode
-  database: d7g5f21qo0pnuq
+  database: labone_base
   pool: 5
-  username: vtvtcsjabenaow
-  password: 2arpuiPnve5UPIQtza8Kr2lfez   ### password you have specified within psql
-  host: ec2-50-19-233-111.compute-1.amazonaws.com
+  username: diegodb
+  password: <%= IO.read(File.expand_path('~/.db')) rescue ''   ### password you have specified within psql
   port: 5432
