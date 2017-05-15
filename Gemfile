@@ -19,7 +19,8 @@ end
 group :assets do
   
   gem 'bootstrap-sass', '~> 3.3.6'
-  gem 'sass-rails',   '~> 3.2.3'
+  gem 'sass-rails', '>= 3.2'
+  gem 'sprockets-rails'
 
   gem 'coffee-rails', '~> 3.2.1'
 
