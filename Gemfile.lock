@@ -95,6 +95,7 @@ GEM
     net-ssh (4.1.0)
     orm_adapter (0.5.0)
     polyglot (0.3.5)
+    power_assert (0.4.1)
     puma (3.8.2)
     rack (1.4.7)
     rack-cache (1.7.0)
@@ -145,6 +146,8 @@ GEM
     sshkit (1.13.1)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
+    test-unit (3.2.3)
+      power_assert
     therubyracer (0.12.3)
       libv8 (~> 3.16.14.15)
       ref
@@ -184,6 +187,7 @@ DEPENDENCIES
   simple_form
   sprockets-rails
   sqlite3
+  test-unit
   therubyracer
   uglifier (>= 1.0.3)
 
